@@ -1,0 +1,52 @@
+<html>
+  {{> head title="Halaman Bantuan"}}
+  <body>
+    <div class="main-content help-page">
+      {{> header}}
+
+      <section class="faq-section">
+        <h2 text-align="center">Frequently Asked Questions (FAQ)</h2>
+        <ul class="faq-list">
+          <li>
+            <h3>Halaman ini digunakan untuk apa?</h3>
+            <p>Halaman ini digunakan untuk memberikan bantuan berupa penjelasan umum dan informasi teknis mengenai aplikasi. Pengguna dapat memahami cara penggunaan aplikasi, sumber data, serta teknologi yang digunakan di baliknya.</p>
+          </li>
+
+          <li>
+            <h3>Apa itu API?</h3>
+            <p>API (Application Programming Interface) adalah antarmuka yang memungkinkan satu aplikasi berkomunikasi dengan aplikasi lain melalui permintaan dan respons data. Dengan API, aplikasi dapat saling bertukar informasi secara efisien tanpa perlu mengetahui cara kerja internal masing-masing.</p>
+          </li>
+
+          <li>
+            <h3>API apa yang digunakan dalam aplikasi ini?</h3>
+            <p>Aplikasi ini menggunakan <strong>Weatherstack API</strong> untuk mengambil data cuaca secara real-time. API tersebut menyediakan informasi seperti suhu, kelembapan, kecepatan angin, dan kondisi langit dari berbagai wilayah di seluruh dunia.</p>
+          </li>
+
+          <li>
+            <h3>Pola arsitektur API apa yang digunakan?</h3>
+            <p>Aplikasi ini menggunakan pola arsitektur <strong>RESTful API (Representational State Transfer)</strong>. REST memungkinkan komunikasi antara klien dan server menggunakan protokol HTTP dengan metode seperti GET, POST, PUT, dan DELETE. Data biasanya dikirim dalam format JSON agar lebih ringan dan mudah diproses.</p>
+          </li>
+        </ul>
+
+        <!-- Tambahkan gambar REST API -->
+        <img src="/img/REST.png" alt="Diagram REST API" class="api-img">
+
+        <!-- Penjelasan tentang gambar REST API -->
+        <div class="api-description">
+          <h3>Penjelasan Gambar REST API</h3>
+          <p>
+            Gambar di atas menunjukkan cara kerja arsitektur <strong>REST (Representational State Transfer)</strong>. Pada bagian kiri terdapat <strong>Klien</strong> (misalnya browser atau aplikasi), yang mengirimkan <strong>permintaan HTTP</strong> ke server menggunakan metode seperti GET, POST, PUT, atau DELETE.
+          </p>
+          <p>
+            Di sisi kanan terdapat <strong>Server</strong> yang menerima permintaan tersebut, memprosesnya, lalu mengirimkan kembali <strong>respons</strong> dalam format JSON. Respons ini kemudian digunakan oleh klien untuk menampilkan data kepada pengguna.
+          </p>
+          <p>
+            Arsitektur REST membuat proses komunikasi menjadi sederhana, cepat, dan efisien karena setiap permintaan bersifat stateless (tidak menyimpan status sebelumnya). Model ini banyak digunakan pada berbagai aplikasi modern, termasuk aplikasi cuaca ini.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    {{> footer}}
+  </body>
+</html>

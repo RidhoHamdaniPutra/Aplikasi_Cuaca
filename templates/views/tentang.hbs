@@ -1,0 +1,84 @@
+<html>
+{{> head title="Tentang Saya - Aplikasi Cek Cuaca"}}
+
+<body>
+  <div class="main-content about-page">
+    {{> header}}
+
+    <section class="about-section">
+      <!-- Foto Profil -->
+      <img class="portrait" src="/img/profil.png" alt="Foto Profil Ridho Hamdani Putra" />
+
+      <div class="about-text">
+        <h2>Ridho Hamdani Putra</h2>
+        <p>
+          Halo!!! Saya mahasiswa Teknik Informatika yang memiliki minat dalam pengembangan <em>aplikasi web</em> dan
+          <em>mobile</em>.
+          Saya senang mempelajari hal baru di bidang teknologi.
+        </p>
+
+        <hr class="divider" />
+        <!-- CV Singkat -->
+        <h3>CV Singkat</h3>
+        <ul class="cv-list">
+          <li><strong>Nama:</strong> Ridho Hamdani Putra</li>
+          <li><strong>Tempat, Tanggal Lahir:</strong> Kotabaru, 02 April 2005</li>
+          <li><strong>Alamat:</strong> Padang</li>
+          <li><strong>Email:</strong> <a href="mailto:ridhohamdaniputra@gmail.com">ridhohamdaniputra@gmail.com</a></li>
+          <li><strong>Pendidikan:</strong> S1 Teknik Informatika, Universitas Negeri Padang (20223 - Sekarang)</li>
+          <li><strong>Bahasa Pemrograman:</strong> C, C++, JavaScript, PHP, Dart, Python</li>
+          <li><strong>Framework / Tools:</strong> Node.js, Express.js, Laravel, Flutter, Firebase, Git</li>
+          <li><strong>Hobi:</strong> Tenis Meja, Futsal</li>
+        </ul>
+
+        <hr class="divider" />
+        <!-- Pengalaman -->
+        <h3>Pengalaman Proyek</h3>
+
+        <div class="project">
+          <h4>1. Website Pembelian Tiket Bioskop</h4>
+          <img src="/img/web.png" alt="Website" class="project-img" />
+          <p>
+            Website pembelian tiket bioskop yang dikembangkan menggunakan
+            <strong>PHP Laravel</strong> dengan fitur <em>CRUD</em> untuk pengelolaan data film,
+            jadwal tayang, dan pemesanan tiket. Proyek ini berfokus pada pengelolaan database
+            dan antarmuka yang ramah pengguna.
+          </p>
+        </div>
+
+        <div class="project">
+          <h4>2. Aplikasi Mobile Adopsi Hewan Peliharaan - <em>PawPal</em></h4>
+          <img src="/img/Logo_PawPal.png" alt="Logo PawPal" class="project-img" />
+          <p>
+            Aplikasi <strong>PawPal</strong> dikembangkan menggunakan <strong>Flutter</strong> dan
+            <strong>Firebase</strong> untuk membantu pengguna menemukan hewan peliharaan yang bisa diadopsi.
+            Fitur utama meliputi daftar hewan, sistem adopsi, autentikasi pengguna, dan manajemen data real-time.
+          </p>
+        </div>
+
+        <hr class="divider" />
+        <!-- Tujuan -->
+        <h3>Tujuan & Motivasi</h3>
+        <p>
+          Saya bercita-cita menjadi seorang <strong>Full-Stack Developer</strong> yang mampu
+          membangun aplikasi web dan mobile yang bermanfaat bagi banyak orang.
+          Melalui berbagai proyek seperti PawPal dan Aplikasi Cek Cuaca, saya belajar bagaimana
+          mengintegrasikan backend, frontend, serta layanan API eksternal.
+        </p>
+
+        <!-- Kontak -->
+        <div class="contact-info">
+          <p><strong>GitHub:</strong>
+            <a href="https://github.com/RidhoHamdaniPutra" target="_blank">
+              github.com/RidhoHamdaniPutra
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {{> footer}}
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<html lang="id">
+  <head>
+    {{> head title="Berita Terkini"}}
+  </head>
+  <body>
+    <div class="main-content">
+      {{> header}}
+
+      <section class="news-section">
+        <h2 class="section-title">Berita Terkini</h2>
+        <p class="section-description">
+          Cari berita berdasarkan topik atau pilih kategori tertentu.
+        </p>
+
+        <form action="/berita" method="get" class="news-filter">
+          <input
+            type="text"
+            name="keyword"
+            placeholder="Cari topik (misal: teknologi, politik, cuaca...)"
+            value="{{keyword}}"
+          />
+
+          <select name="category">
+            <option value="">Semua Kategori</option>
+            <option value="general" {{#if (eq category "general")}}selected{{/if}}>Umum</option>
+            <option value="business" {{#if (eq category "business")}}selected{{/if}}>Bisnis</option>
+            <option value="technology" {{#if (eq category "technology")}}selected{{/if}}>Teknologi</option>
+            <option value="sports" {{#if (eq category "sports")}}selected{{/if}}>Olahraga</option>
+            <option value="health" {{#if (eq category "health")}}selected{{/if}}>Kesehatan</option>
+            <option value="entertainment" {{#if (eq category "entertainment")}}selected{{/if}}>Hiburan</option>
+            <option value="science" {{#if (eq category "science")}}selected{{/if}}>Sains</option>
+          </select>
+
+          <button type="submit">Tampilkan</button>
+        </form>
+
+        {{#if news}}
+          <div class="news-grid">
+            {{#each news}}
+              <div class="news-card">
+                <img
+                  src="{{#if this.image}}{{this.image}}{{else}}/img/no-image.png{{/if}}"
+                  alt="Gambar Berita"
+                  class="news-image"
+                />
+
+                <div class="news-content">
+                  <h3 class="news-title">{{this.title}}</h3>
+                  <p class="news-desc">{{this.description}}</p>
+                  <p class="news-meta">
+                    <strong>Sumber:</strong> {{this.source}} |
+                    <strong>Kategori:</strong> {{this.category}}
+                  </p>
+                  <a href="{{this.url}}" target="_blank" class="btn-read">Baca Selengkapnya</a>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        {{else}}
+          <p class="no-news">Tidak ada berita yang dapat ditampilkan untuk pencarian ini.</p>
+        {{/if}}
+      </section>
+    </div>
+
+    {{> footer}}
+  </body>
+</html>
