@@ -11,7 +11,7 @@ weatherform.addEventListener('submit', (e) => {
     const location = search.value
     pesanSatu.textContent = 'Sedang mencari lokasi ..'
     pesanDua.textContent = ''
-    fetch('/api/infocuaca?address=' + location).then((response) => {
+    fetch('/infocuaca?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 pesanSatu.textContent = data.error
@@ -21,4 +21,4 @@ weatherform.addEventListener('submit', (e) => {
             }
         })
     })
-})
+}) 
