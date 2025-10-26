@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 console.log("Client side javascript file diproses");
 
 const weatherform = document.querySelector('form')
