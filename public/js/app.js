@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 console.log("Client side javascript file diproses");
 
 const weatherform = document.querySelector('form')
@@ -11,15 +13,14 @@ weatherform.addEventListener('submit', (e) => {
     const location = search.value
     pesanSatu.textContent = 'Sedang mencari lokasi ..'
     pesanDua.textContent = ''
-    fetch('http://localhost:4000/infocuaca?address=' +
-        location).then((response) => {
-            response.json().then((data) => {
-                if (data.error) {
-                    pesanSatu.textContent = data.error
-                } else {
-                    pesanSatu.textContent = data.lokasi
-                    pesanDua.textContent = data.prediksiCuaca
-                }
-            })
+    fetch('/infocuaca?address=' + location).then((response) => {
+        response.json().then((data) => {
+            if (data.error) {
+                pesanSatu.textContent = data.error
+            } else {
+                pesanSatu.textContent = data.lokasi
+                pesanDua.textContent = data.prediksiCuaca
+            }
         })
-}) 
+    })
+})
