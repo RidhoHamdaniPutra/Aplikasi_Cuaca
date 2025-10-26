@@ -120,5 +120,5 @@ app.get("/tes", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Server berjalan pada port' + port);
+  console.log('Server berjalan pada port ' + port);
 })
